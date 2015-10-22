@@ -1,0 +1,49 @@
+## Configuration Nginx + PHP
+#web:
+# restart: always
+# image: nginx
+# ports:
+#  - "80:80"
+# volumes:
+#  - /c/Users/Vincent/Docker/config/nginx:/etc/nginx/conf.d
+#  - /var/www:/var/www/local.dev
+# links:
+#  - php:php
+#php:
+# build: dockerfiles/php
+# restart: always
+# volumes:
+#  - /var/www:/var/www/local.dev
+#  - /var/www/docker/php.ini:/usr/local/etc/php/php.ini
+# links:
+#  - db:db
+
+## Configuration Apache
+web:
+    restart: always
+    build: dockerfiles/apache
+    ports:
+        - "80:80"
+    volumes:
+        - /c/Users/Vincent/Docker/config/apache-sites:/etc/apache2/sites-enabled
+        - /c/Users/Vincent/Docker/config/php.ini:/etc/php5/apache2/conf.d/30-custom.ini
+        - /var/www:/var/www/local.dev
+    environment:
+        - ALLOW_OVERRIDE=true
+    links:
+        - db:db
+        - maildev:maildev
+
+db:
+    image: mysql
+    restart: always
+    volumes:
+        - /var/lib/boot2docker/mysql:/var/lib/mysql
+    environment:
+        - MYSQL_ROOT_PASSWORD=root
+
+maildev:
+    restart: always
+    image: djfarrelly/maildev
+    ports:
+        - "1080:80"
