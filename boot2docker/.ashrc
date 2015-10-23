@@ -1,5 +1,5 @@
 # ~/.ashrc: Executed by SHells.
-#
+
 . /etc/init.d/tc-functions
 if [ -n "$DISPLAY" ]
 then
@@ -10,7 +10,6 @@ fi
 export EDITOR
 
 # Alias definitions.
-#
 alias df='df -h'
 alias du='du -h'
 
@@ -29,10 +28,11 @@ alias ce='cd /etc/sysconfig/tcedir'
 # CUSTOM
 
 alias www="cd /var/www"
-cd /var/www
 
 alias composer='docker run -ti --rm -v $(pwd):/app composer/composer'
 alias php='docker exec -ti docker_web_1 php'
 
 alias dc='docker run --rm -i -t -v /var/run/docker.sock:/var/run/docker.sock -v `pwd`:`pwd` -w `pwd` docker-compose'
 alias docker-compose='dc'
+
+cd /c/Users/Vincent/Docker

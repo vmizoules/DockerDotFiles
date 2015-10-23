@@ -13,9 +13,7 @@ Créer le container docker-compose :
 	cd /c/Users/<username>/Docker/dockerfiles/compose-master
 	docker build -t docker-compose .
 
-Pour connaître l'IP de la machine Docker
-
-	boot2docker ip
+C'est fini ! :-)
 
 # Utilisation normale
 
