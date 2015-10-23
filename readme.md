@@ -6,7 +6,7 @@ Lancer la machine
 
 Créer le "bootlocal.sh" dans la VM : 
 
-	cd /var/lib/boot2docker/ && sudo touch bootlocal.sh && sudo chmod 744 bootlocal.sh && sudo echo "cd /c/Users/Vincent/Docker/boot2docker && ./bootlocal.sh" > bootlocal.sh
+	cd /var/lib/boot2docker/ && sudo touch bootlocal.sh && sudo chmod 744 bootlocal.sh && echo "cd /c/Users/Vincent/Docker/boot2docker && ./bootlocal.sh"|sudo sudo tee bootlocal.sh
 
 Créer le container docker-compose :
 
@@ -29,6 +29,6 @@ Lancer la stack
 
 # Mount
 
-Dossier utilisateur Windows automatiquement monté dans la vm docker (dans /c/Users...)
+Le dossier utilisateur de Windows est automatiquement monté dans la vm docker (dans /c/Users/...)
 
-Le dossier /var/www est monté par le `bootlocal.sh`
+Le dossier `/var/www` est monté par le script `bootlocal.sh`.
