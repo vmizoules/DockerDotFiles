@@ -27,7 +27,7 @@ web:
     volumes:
         - /c/Users/Vincent/Docker/config/apache-sites:/etc/apache2/sites-enabled
         - /c/Users/Vincent/Docker/config/php.ini:/etc/php5/apache2/conf.d/30-custom.ini
-        - /var/www:/var/www/local.dev
+        - /var/www:/var/www/
     environment:
         - ALLOW_OVERRIDE=true
     links:
