@@ -31,16 +31,16 @@ web:
     environment:
         - ALLOW_OVERRIDE=true
     links:
-        - db:db
         - maildev:maildev
-
-db:
-    image: mysql
-    restart: always
-    volumes:
-        - /var/lib/boot2docker/mysql:/var/lib/mysql
-    environment:
-        - MYSQL_ROOT_PASSWORD=root
+#        - db:db
+#
+#db:
+#    image: mysql
+#    restart: always
+#    volumes:
+#        - /var/lib/boot2docker/mysql:/var/lib/mysql
+#    environment:
+#        - MYSQL_ROOT_PASSWORD=root
 
 maildev:
     restart: always
