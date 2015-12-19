@@ -7,7 +7,10 @@
 
 # mount distant storage
 mkdir -p /var/www
-mount -t vboxsf www /var/www
+mount -t vboxsf www /var/www # www
+
+mkdir -p /var/zz
+mount -t vboxsf zz /var/zz # zz
 
 # copy alias
 cp .ashrc ~docker/.ashrc
