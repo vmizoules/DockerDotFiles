@@ -20,7 +20,6 @@
 
 ## Configuration Apache
 web:
-    restart: always
     build: dockerfiles/apache
     ports:
         - "80:80"
@@ -43,7 +42,6 @@ web:
 #        - MYSQL_ROOT_PASSWORD=root
 
 maildev:
-    restart: always
     image: djfarrelly/maildev
     ports:
         - "1080:80"
