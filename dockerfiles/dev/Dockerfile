@@ -6,8 +6,13 @@ RUN apt-get update && apt-get install -y \
         build-essential \
         make \
         libzzip-dev \
-    && echo "Install done."
+        openjdk-7-jre \
+        openjdk-7-jdk \
+    && echo "Ok"
 
-WORKDIR /var/www
+ADD Readme.txt /Readme.txt
 
-CMD [""]
+WORKDIR /app
+#ENV JAVA_TOOL_OPTIONS -Dfile.encoding=UTF8
+
+CMD ["cat", "/Readme.txt"]
