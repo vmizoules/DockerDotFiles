@@ -13,6 +13,7 @@ Available commands: (add at the end of the docker run command)
   * g++
   * java
   * javac
+  * dos2unix
   * and basic linux commands (ls, cat, ./exec)
 
 Exemple:

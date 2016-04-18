@@ -9,6 +9,9 @@ RUN apt-get update && apt-get install -y \
         openjdk-7-jre \
         openjdk-7-jdk \
     && echo "Ok"
+RUN apt-get update && apt-get install -y \
+        dos2unix \
+    && echo "Ok"
 
 ADD Readme.txt /Readme.txt
 
