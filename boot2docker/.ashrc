@@ -39,4 +39,4 @@ alias python3='docker run -ti --rm -v $(pwd):/usr/src/myapp -w /usr/src/myapp py
 alias dc='docker run --rm -i -t -v /var/run/docker.sock:/var/run/docker.sock -v `pwd`:`pwd` -w `pwd` docker-compose'
 alias docker-compose='dc'
 
-cd /c/Users/Vincent/Docker
+cd /c/Users/
