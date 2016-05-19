@@ -12,9 +12,11 @@ Lancer la machine
 
 	docker-machine start && docker-machine ssh
 
-Créer le "bootlocal.sh" dans la VM : 
+Créer le "bootlocal.sh" dans la VM :
 
-	cd /var/lib/boot2docker/ && sudo touch bootlocal.sh && sudo chmod 744 bootlocal.sh && echo "cd /c/Users/Vincent/Docker/boot2docker && ./bootlocal.sh"|sudo sudo tee bootlocal.sh
+	cd /var/lib/boot2docker/ && sudo touch bootlocal.sh && sudo chmod 744 bootlocal.sh && echo "cd /c/Users/Vincent/DockerDotFiles/boot2docker && ./bootlocal.sh"|sudo sudo tee bootlocal.sh
+
+*NB : modifiez bien le chemin "/c/Users/Vincent..." pour correspondre à votre installation.*
 
 Créer le container docker-compose :
 
