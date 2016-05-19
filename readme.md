@@ -1,8 +1,16 @@
-# Premier lancement
+# But
+
+Simplifier l'utilisation de docker toolbox à travers boot2docker (en attendant que Docker pour Windows sorte de sa beta privé).
+
+# Initialisation
+
+Créer la machine
+
+	docker-machine create default --driver virtualbox
 
 Lancer la machine
 
-	boot2docker init && boot2docker up && boot2docker ssh
+	docker-machine start && docker-machine ssh
 
 Créer le "bootlocal.sh" dans la VM : 
 
@@ -19,14 +27,20 @@ C'est fini ! :-)
 
 Lancer la machine
 
-	boot2docker up && boot2docker ssh
+	docker-machine start && docker-machine ssh
 
-Lancer la stack
+Lancer la stack de votre choix
 
 	docker-compose up
 
-# Mount
+# Explications techniques
 
-Le dossier utilisateur de Windows est automatiquement monté dans la vm docker (dans /c/Users/...)
+## Montages
+
+Le dossier utilisateur de Windows est automatiquement monté dans la VM boot2docker (dans /c/Users/...)
 
 Le dossier `/var/www` est monté par le script `bootlocal.sh`.
+
+# Troubleshooting
+
+Si des "?" apparaissent, regarder du côté des caractères de retour à la ligne Windows (supprimer les ^M sous vi par exemple)
