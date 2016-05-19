@@ -18,10 +18,10 @@ Créer le "bootlocal.sh" dans la VM :
 
 Créer le container docker-compose :
 
-	cd /c/Users/<username>/Docker/dockerfiles/compose-master
+	cd /c/Users/<windowsUsername>/<repositoryName>/dockerfiles/compose-master
 	docker build -t docker-compose .
 
-C'est fini ! :-)
+C'est fini !
 
 # Utilisation normale
 
