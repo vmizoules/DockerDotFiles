@@ -31,8 +31,10 @@ alias www="cd /var/www"
 
 alias composer='docker run -ti --rm -v $(pwd):/app composer/composer'
 alias php='docker exec -ti docker_web_1 php'
-alias ubuntu='docker run --rm -v $(pwd):/app vmizoules/dev'
+alias ubuntu='docker run -ti --rm -v $(pwd):/app vmizoules/dev'
 alias linux='ubuntu'
+alias python2='docker run -ti --rm -v $(pwd):/usr/src/myapp -w /usr/src/myapp python:2.7.11-alpine python -u'
+alias python3='docker run -ti --rm -v $(pwd):/usr/src/myapp -w /usr/src/myapp python:3.5.1-alpine python -u'
 
 alias dc='docker run --rm -i -t -v /var/run/docker.sock:/var/run/docker.sock -v `pwd`:`pwd` -w `pwd` docker-compose'
 alias docker-compose='dc'
