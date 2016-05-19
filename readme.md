@@ -43,4 +43,6 @@ Le dossier `/var/www` est monté par le script `bootlocal.sh`.
 
 # Troubleshooting
 
-Si des "?" apparaissent, regarder du côté des caractères de retour à la ligne Windows (supprimer les ^M sous vi par exemple)
+Les scripts fonctionnent mal ? Des "?" apparaissent ? -> regarder du côté des caractères de retour à la ligne Windows
+- supprimer les ^M sous vi
+- sous Sublime Text : View > Line Ending > Unix
