@@ -5,12 +5,13 @@ RUN apt-get update && apt-get install -y \
         g++ \
         build-essential \
         make \
+        cmake \
         libzzip-dev \
-        openjdk-7-jre \
-        openjdk-7-jdk \
     && echo "Ok"
 RUN apt-get update && apt-get install -y \
         dos2unix \
+        openjdk-8-jre \
+        openjdk-8-jdk \
     && echo "Ok"
 
 ADD Readme.txt /Readme.txt

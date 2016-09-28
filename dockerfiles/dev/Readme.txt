@@ -1,4 +1,6 @@
+Create image:
 
+  docker -t vmizoules/dev .
 
 Usage:
 
