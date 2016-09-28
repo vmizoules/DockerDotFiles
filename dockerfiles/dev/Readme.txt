@@ -1,6 +1,3 @@
-Create image:
-
-  docker -t vmizoules/dev .
 
 Usage:
 
@@ -11,8 +8,11 @@ Usage:
 Available commands: (add at the end of the docker run command)
 
   * make
+  * cmake
   * gcc
   * g++
+  * git
+  * svn
   * java
   * javac
   * dos2unix
