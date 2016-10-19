@@ -1,0 +1,8 @@
+docker run --rm --name iodine-client -ti --privileged --link iodine asmaps/docker-iodine bash
+
+exit 0
+Dans le conteneur :
+
+cat /etc/hosts
+echo "nameserver iodine" > /etc/resolv.conf
+iodine test.test

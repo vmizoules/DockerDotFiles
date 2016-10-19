@@ -1,0 +1,1 @@
+docker run -d --privileged -p 53:53/udp -e IODINE_HOST=test.test -e IODINE_PASSWORD=bonjour -e EXTERNAL_IP=192.168.99.100 --name iodine asmaps/docker-iodine
