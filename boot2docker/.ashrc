@@ -14,6 +14,7 @@ alias df='df -h'
 alias du='du -h'
 
 alias ls='ls -p'
+alias l='ls'
 alias ll='ls -l'
 alias la='ls -la'
 
@@ -28,6 +29,7 @@ alias ce='cd /etc/sysconfig/tcedir'
 # CUSTOM
 
 alias www="cd /var/www"
+alias zz="cd /var/zz"
 
 alias composer='docker run -ti --rm -v $(pwd):/app composer/composer'
 alias php='docker exec -ti docker_web_1 php'
